@@ -1,23 +1,27 @@
 #include <avr/io.h>
+#define LED_LENGTH 8
 
-int main ()
+int main()
 {
-  uint32_t i;
-  
-  DDRB |= (1 << 5); // pinMode(13, OUTPUT);
+  DDRD |= 0XFF;
   while (1)
-  {
-    PORTB |= (1 << 5); // digitalWrite(13, HIGH);
-    i=0x3FFFF;
-    do
+  { //KIERUNEK D0 -> D7
+    for (uint8_t i = 0; i < LED_LENGTH; i++)
     {
-     __asm__ __volatile__("nop");
-    } while (i--);
-    PORTB &= !(1 << 5); //digitalWrite(13, LOW);
-    i = 0x3FFF;
-    do
+      PORTD = (1 << i);
+      for (uint32_t j = 0x1FFFF; j > 0; j--) 
+      {
+      __asm__ __volatile__ ("nop");
+      }
+    }
+    // Kierunek D6 -> D1 
+    for (uint8_t i = 1; i < (LED_LENGTH - 1); i++)
     {
-      __asm__ __volatile__("nop");
-    } while (i--);
+      PORTD = (PORTD >> 1);
+      for (uint32_t j = 0x1FFFF; j > 0; j--)
+      {
+       __asm__ __volatile__("nop");
+      }
+    }
   }
 }
