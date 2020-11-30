@@ -13,4 +13,5 @@ Numer albumu:  72518
 Grupa studencka:  WEL18DE1S1 
 
 # Pytania do zadań z instrukcji
-
+Odpowiedź 
+Zadanie 2-2-1: Czas trwania opóźnienia można zrealizować za pomocą zmiany wartości zmiennych 
