@@ -9,9 +9,9 @@ Data: 30.11.2020r.
 # Informacje o studencie
 
 Imię i nazwisko studenta:  Wiktoria Bielińska   
-Numer albumu:  72518
-Grupa studencka:  WEL18DE1S1 
+Numer albumu:   72518
+Grupa studencka:   WEL18DE1S1 
 
 # Pytania do zadań z instrukcji
 Odpowiedź 
-Zadanie 2-2-1: Czas trwania opóźnienia można zrealizować za pomocą zmiany wartości zmiennych 
+Zadanie 2-2-1: Czas trwania opóźnienia można zrealizować za pomocą zmiany wartości zmiennych  
